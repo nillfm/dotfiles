@@ -12,6 +12,10 @@ shopt -s checkwinsize
 
 bind '"\C- ":possible-completions'
 
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+}
+
 export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\] $(__git_ps1)\$ '
 alias subl='$HOME/apps/sublime/sublime_text'
 alias rm='rm -i'
@@ -23,6 +27,9 @@ alias gpl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d
 alias vg='vagrant'
 alias gos='cd $HOME/.config/sublime-text-2/Packages'
 alias getjson="curl -v -H 'Accept: application/json' -H 'Content-type: application/json' -X GET"
+alias lf='ls -Gl | grep ^d'
+alias lsd='ls -Gal | grep ^d'
+
 unset command_not_found_handle
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
