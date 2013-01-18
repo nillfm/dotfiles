@@ -29,7 +29,10 @@ alias gos='cd $HOME/.config/sublime-text-2/Packages'
 alias getjson="curl -v -H 'Accept: application/json' -H 'Content-type: application/json' -X GET"
 alias lf='ls -Gl | grep ^d'
 alias lsd='ls -Gal | grep ^d'
+alias gohs='cd $HOME/.homesick/repos/dotfiles'
 
 unset command_not_found_handle
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
