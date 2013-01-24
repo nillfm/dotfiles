@@ -33,6 +33,11 @@ alias gohs='cd $HOME/.homesick/repos/dotfiles'
 unset command_not_found_handle
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[ -f $HOME/apps/sublime ] && PATH=$PATH:$HOME/apps/sublime
+
+if [ -d $HOME/apps/sublime ]; then
+  PATH=$PATH:$HOME/apps/sublime
+fi
+
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-export EDITOR=$(which subl)
+export EDITOR=subl
+export PATH
