@@ -29,7 +29,7 @@ alias getjson="curl -v -H 'Accept: application/json' -H 'Content-type: applicati
 alias lf='ls -Gl | grep ^d'
 alias lsd='ls -Gal | grep ^d'
 alias gohs='cd $HOME/.homesick/repos/dotfiles'
-
+alias query='sqlite3 -header -column'
 unset command_not_found_handle
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
