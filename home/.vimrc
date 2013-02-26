@@ -1,9 +1,8 @@
-set nocompatible
 execute pathogen#infect()
+syntax on
+filetype plugin indent on
 syntax enable
 
-filetype plugin on
-filetype indent on
 set autoread
 
 set background=dark
