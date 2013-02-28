@@ -6,7 +6,7 @@ fi
 
 export CLICOLOR=1
 export HISTCONTROL=ignoreboth	#ignore dups and space
-
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 shopt -s checkwinsize
 
 bind '"\C- ":possible-completions'
@@ -15,8 +15,9 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
-#export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\] $(__git_ps1)\$ '
-export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\$ '
+[[ -f /usr/local/git/contrib/completion/git-completion.bash ]] && source /usr/local/git/contrib/completion/git-completion.bash
+export GITPS1SHOWDIRTYSTATE=true
+export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\] $(__git_ps1)\$ '
 
 alias rm='rm -i'
 alias dir='ls -lgsh'
