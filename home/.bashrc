@@ -16,7 +16,7 @@ function mcd() {
 }
 
 [[ -f /usr/local/git/contrib/completion/git-completion.bash ]] && source /usr/local/git/contrib/completion/git-completion.bash
-export GITPS1SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\] $(__git_ps1)\$ '
 
 alias rm='rm -i'
