@@ -41,5 +41,5 @@ fi
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 [[ -s $HOME/nvm/nvm.sh ]] && (source ~/nvm/nvm.sh && (nvm use 0.8.18 >> /dev/null))
-export EDITOR=subl
+export EDITOR=vim
 export PATH

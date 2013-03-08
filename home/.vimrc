@@ -40,6 +40,11 @@ nmap <C-n> :bnext<cr>
 nmap <C-p> :bprev<cr>
 nmap \e :NERDTreeToggle<CR>
 
+nnoremap <leader><leader> <c-^> " switch between last 2 buffers
+
+" re-indent file
+map   <silent> <F6> mmgg=G`m^zz
+
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
