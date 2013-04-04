@@ -22,3 +22,6 @@
 [submodule "home/.vim/bundle/tcomment"]
 	path = home/.vim/bundle/tcomment
 	url = git://github.com/tomtom/tcomment_vim.git
+[submodule "home/.oh-my-zsh"]
+	path = home/.oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
