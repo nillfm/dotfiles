@@ -1,6 +1,10 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
+autoload -U colors
+colors
+setopt prompt_subst
+
 alias rm='rm -i'
 alias dir='ls -lgsh'
 alias dira="dir -a"
@@ -15,7 +19,16 @@ alias gohs='cd $HOME/.homesick/repos/dotfiles'
 alias query='sqlite3 -header -column'
 unset command_not_found_handle
 
-plugins=(git osx ruby)
+plugins=(
+  git
+  osx
+  ruby
+  brew
+  gem
+  rails3
+  rake
+  sublime
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,3 +37,4 @@ source $ZSH/oh-my-zsh.sh
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/fwmyers/.rvm/bin:/Users/fwmyers/.local/bin:/Users/fwmyers/bin
 PATH=$PATH:$HOME/.rvm/bin
 
+setopt menucomplete
