@@ -36,5 +36,6 @@ source $ZSH/oh-my-zsh.sh
 
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/fwmyers/.rvm/bin:/Users/fwmyers/.local/bin:/Users/fwmyers/bin
 PATH=$PATH:$HOME/.rvm/bin
+PATH=$PATH:$HOME/bin
 
 setopt menucomplete

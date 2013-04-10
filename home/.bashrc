@@ -16,9 +16,11 @@ function mcd() {
 }
 
 [[ -f /usr/local/git/contrib/completion/git-completion.bash ]] && source /usr/local/git/contrib/completion/git-completion.bash
+[[ -f $(brew --prefix)/etc/bash_completion ]] && source $(brew --prefix)/etc/bash_completion 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\] $(__git_ps1)\$ '
 
+alias ppjson='python -mjson.tool'
 alias rm='rm -i'
 alias dir='ls -lgsh'
 alias dira="dir -a"
