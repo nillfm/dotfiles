@@ -9,14 +9,12 @@ export HISTCONTROL=ignoreboth	#ignore dups and space
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 shopt -s checkwinsize
 
-bind '"\C- ":possible-completions'
-
 function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
 [[ -f /usr/local/git/contrib/completion/git-completion.bash ]] && source /usr/local/git/contrib/completion/git-completion.bash
-[[ -f $(brew --prefix)/etc/bash_completion ]] && source $(brew --prefix)/etc/bash_completion 
+[[ -f $(brew --prefix)/etc/bash_completion ]] && source $(brew --prefix)/etc/bash_completion
 export GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\] $(__git_ps1)\$ '
 

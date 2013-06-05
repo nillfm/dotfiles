@@ -4,9 +4,8 @@ filetype plugin indent on
 syntax enable
 
 set autoread
-
-set background=dark
-colorscheme solarized
+colorscheme delek
+set background=light
 
 set history=600
 set tabstop=2
