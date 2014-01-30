@@ -1,5 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="jreese"
+DISABLE_AUTO_UPDATE=true
 
 autoload -U colors
 colors
@@ -37,6 +38,7 @@ alias gosvc='cd ~/dev/ngc-dragon'
 alias godomain='cd ~/dev/ngc-domain'
 alias jump='ssh -i ~/.ssh/fmyers_ng_aws_rsa 54.236.109.32'
 
+alias restart-net='sudo sh -c "ifconfig en0 down && ifconfig en0 up"'
 plugins=(
   git
   osx
@@ -55,6 +57,9 @@ source $ZSH/oh-my-zsh.sh
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/fwmyers/.rvm/bin:/Users/fwmyers/.local/bin:/Users/fwmyers/bin
 PATH=$PATH:$HOME/.rvm/bin
 PATH=$PATH:$HOME/bin
+PATH=$PATH:/usr/local/share/npm/bin
+
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 rvm use 1.9.3
 setopt menucomplete
