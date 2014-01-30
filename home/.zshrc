@@ -45,7 +45,7 @@ plugins=(
   ruby
   brew
   gem
-  rails3
+  rails
   rake
   sublime
 )
