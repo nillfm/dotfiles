@@ -22,7 +22,7 @@ alias lf='ls -Gl | grep ^d'
 alias lsd='ls -Gal | grep ^d'
 alias gohs='cd $HOME/.homesick/repos/dotfiles'
 alias et='subl ~/.Documents/time.txt'
-
+alias opdf='open -a Preview -f'
 ES_VM_ROOT=/Users/fmyers/dev/chef-repo/vagrant/elasticsearch_only
 alias start-es='cd ${ES_VM_ROOT} && vagrant up'
 alias halt-es='cd ${ES_VM_ROOT} && vagrant halt'
